@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心卫士--首家长程14天心电监测</title>
+    <link rel="stylesheet" type="text/css" href="webSite/css/index.css">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <!--轮播引用-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+        /*@font-face {*/
+            /*font-family: 方正黑体简体;*/
+            /*src: url('方正黑体简体.TTF');*/
+        /*}*/
+        .daohanglan a,a:link,a:hover,a:active,a:visited{
+            /*font-family: 方正大黑简体;*/
+            font-family: "Microsoft YaHei","Hiragino Sans GB",sans-serif;
+            text-decoration: none;
+            color:#FFFFFF
+        }
+        body{font-family: "Microsoft YaHei","Hiragino Sans GB",sans-serif;}
+    </style>
+</head>
+<body>
+
+<!--导航栏-->
+<div class="daohanglan navbar-fixed-top" style="width: 100%;background: #262930;">
+    <!--logo-->
+    <div class="index_logo" style="float: left;">
+        <a href="index.html"><img src="webSite/img/Index/logo.png" style="width: 100%;"></a>
+    </div>
+    <!--内容-->
+    <div class="index_logoContent index_logoContentUl" style="float: left;color: #FFFFFF;">
+        <span class="index_logoContentSpan" style="letter-spacing: 1px;margin-bottom:  3px;"><a href="index.html">首页</a></span>
+        <span class="index_logoContentSpan" style="letter-spacing: 1px;padding-bottom: 3px;"><a href="webSite/html/information.html">最新资讯</a></span>
+        <span class="index_logoContentSpan" style="letter-spacing: 1px;padding-bottom: 3px;"><a href="webSite/html/about.html">关于我们</a></span>
+        <span class="index_logoContentSpan" style="letter-spacing: 1px;padding-bottom: 3px;"><a href="webSite/html/join.html">加入我们</a></span>
+
+        <span style="letter-spacing: 1px;"><a href="webSite/html/media.html">媒体资料</a></span>
+    </div>
+    <div class="index_logoShare"  style="float: left;">
+        <div class="index_logoShareSina"  tabindex="1" style=" outline:none; float: left;"><img src="webSite/img/Index/assets/矢量智能对象-拷贝-2.png" style="width: 100%;"></div>
+        <div class="index_logoShareWeChat" tabindex="1" style="outline:none;float:right;"><img src="webSite/img/Index/assets/微信.png" style="width: 100%;"></div>
+        <div style="clear: both;"></div>
+    </div>
+
+
+
+
+    <!--1111111-->
+    <div id="dowsApp" class="index_logoDownloadApp" style="float: left;text-align: center;margin: 0 auto;">
+        <p id="dowsApp_p" class="index_logoDownloadApp_p" tabindex="1" style="color: #FFFFFF;margin: 0 auto;border-radius: 50px;padding: 2px 5px;outline: none;">下载APP</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!--222222-->
+<div style="position: relative;">
+    <div id="iosanzhuo" class="iosanzhuo" style="position: fixed;top: 0;right: 0;z-index: 200;display: none">
+        <img src="webSite/img/Index/assets/下载APP二维码.png" style="width: 100%;">
+    </div>
+    <div id="iosanzhuo" class="iosanzhuo1" style="position: fixed;right: 0;z-index: 200;display:none;width:30%;height:30%;margin-top:80px">
+        <img src="webSite/img/Index/assets/weixining.png" style="width: 40%;">
+    </div>
+     <div id="iosanzhuo" class="iosanzhuo2" style="position: fixed;right: 0;z-index: 200;display:none;width:35%;height:30%;margin-top:80px">
+        <img src="webSite/img/Index/assets/weiboing.png" style="width: 30%;">
+    </div>
+</div>
+
+<!--内容一-->
+<div style="width: 100%;height: auto;position: relative;text-align: center;">
+    <img src="webSite/img/Index/图层-37.jpg" style="width: 100%;height: auto;">
+    <div class="content1_content" style="position: absolute;top: 0;left: 0;width: 100%;height: auto;color: #FFFFFF;">
+        <p class="indexContent1_title1" style="margin: 0;font-weight: bold;">心卫士, 在家做心脏检查</p>
+        <p class="indexContent1_title2" style="margin: 0;font-weight: 800;">14天连续心脏监测</p>
+        <p class="indexContent1_title3" style="margin: 0;">336小时,150万次心跳</p>
+        <div id="clickWatchVideo_p" class="indexContent1_title4" >
+            <p style="background: #ff485b;width: 8em;margin: 0 auto;border-radius: 50px;padding: 5px;">观看视频</p>
+        </div>
+    </div>
+</div>
+<!--点击观看视频(内容一)-->
+<div id="clickWatchVideo" style="display: none;width: 100vw;height: 100vh;position: fixed;z-index: 10000;top: 0;left: 0;background: black;">
+    <div id="indexVideoDiv" style="width: 90%;">
+        <video id="indexVideo" controls preload="none" style="width: 100%;">
+            <source src="webSite/video/网站视频.mp4">
+            您现在使用的浏览器暂不支持HTML5视频
+        </video>
+    </div>
+    <!--关闭视频-->
+    <div id="closeVideo" style="position: absolute;top: 0;right: 0;width: 3%;margin-top: 2%;margin-right: 2%;">
+        <img src="webSite/img/Index/close.png" style="width: 100%;">
+    </div>
+</div>
+
+<!--内容二-->
+<div style="width: 100%;height: auto;">
+    <div style="width: 52%;float: left;">
+        <div style="margin-left: 30%;width: 52%">
+            <p class="content2_title" style="color: #262930;margin-bottom: 0;">医疗级长程心电记录仪</p>
+            <p class="content2_content" style="color: #868a92;margin-bottom: 0;">
+                心卫士Mr.Wear,专注于亚健康人群的早期心律失常
+                筛查,慢病及术后患者的日常心电监护。能在第一时
+                间,准确捕捉您的每一次异常心动!
+            </p>
+            <img class="content2_contentImg" src="webSite/img/Index/assets/cfda.png">
+            <p class="content2_certificateNumber" style="color: #868a92;margin-top: 1px;margin-bottom: 0;letter-spacing: 4px;">国家食品药品监督管理局认证</p>
+            <p class="content2_certificateNumber" style="color: #868a92;margin-top: 1px;padding-bottom: 1.5rem;">注册证编号:粤械注准20162211305</p>
+        </div>
+    </div>
+    <div class="content2_titleImg" style="width: 47%;float: left;">
+        <img src="webSite/img/Index/photo%20link/心卫士.png" style="width: 85%;">
+    </div>
+    <!--清楚浮动属性-->
+    <div style="clear: both;"></div>
+</div>
+
+<!--内容三-->
+<div style="width: 100%;height: 43.25em;background: url('webSite/img/Index/photo link/置于底层--不随整体移动.jpg');background-position: 50% 80%;">
+    <!--<img src="../img/Index/photo%20link/置于底层&#45;&#45;不随整体移动.png" style="position: absolute;bottom: 0;left: 0;overflow: hidden;z-index: -1000;">-->
+    <div class="indexCintent3_txt" style="padding-left: 60%;">
+        <p class="indexTitle_full  indexCintent3_title" style="color: #FFFFFF;margin: 0;">自己在家就能贴</p>
+        <p class="indexContent_full" style="color: #FFFFFF;margin: 0;">随时随地,简单易用</p>
+    </div>
+</div>
+
+<!--内容四-->
+<div style="width: 100%;height: auto;position: relative;">
+    <img src="webSite/img/Index/photo%20link/图层-10-副本-2.png" style="width: 70%;">
+    <div content="content4_txt" style="position: absolute;top: 0;right: 0;padding-right: 12%;">
+        <p class="content4_title indexTitle_full" style="color: #262930;margin: 0;">游泳洗澡都没问题</p>
+        <p class="indexContent_full indexContent_content" style="color: #868a92;margin: 0">IPX7高级防水设计,</p>
+        <p class="indexContent_full indexContent_content" style="color: #868a92;margin: 0">可自由工作、运动、洗澡、休息......</p>
+        <p class="indexContent_full indexContent_content" style="color: #868a92;margin: 0">对日常生活无扰</p>
+
+        <div class="content4_groupPhoto">
+            <img src="webSite/img/Index/assets/矢量智能对象_12.png" style="padding-right: 1.5625rem;">
+            <img src="webSite/img/Index/assets/矢量智能对象_9.png" style="padding-right: 1.5625rem;">
+            <img src="webSite/img/Index/assets/矢量智能对象_42.png" style="padding-right: 1.5625rem;">
+            <img src="webSite/img/Index/assets/矢量智能对象.png" style="padding-right: 1.5625rem;">
+        </div>
+    </div>
+</div>
+
+<!--内容五-->
+<div style="width: 100%;position: relative;">
+    <img src="webSite/img/Index/图层-36.jpg" style="width: 100%;">
+    <div class="content5_txt" style="color: #FFFFFF;position: absolute;left: 0;top: 0;">
+        <p class="indexTitle_full" style="margin: 0;">轻薄 舒适 无负担</p>
+        <p class="indexContent_full content5_content" style="margin: 0;">创可贴大小</p>
+        <p class="indexContent_full content5_content" style="margin: 0;">重量不超过9克</p>
+        <p class="indexContent_full content5_content" style="margin: 0;">厚度小于6毫米</p>
+    </div>
+</div>
+
+<!--内容六-->
+<div style="margin-bottom: -7px;">
+    <p class="indexTitle_full" style="color: #262930;width: 100%;text-align: center;padding-top: 85px;margin: 0;">医疗级生物传感器,检测更精确</p>
+    <p class="indexContent_full indexContent6_content" style="color: #868a92;width: 100%;text-align: center;margin: 0;">医用级材质,通过严格生物兼容性测试</p>
+    <div style="width: 41%;margin: 0 auto;">
+        <img src="webSite/img/Index/photo%20link/图层-40.png" style="width: 100%">
+    </div>
+</div>
+
+<!--内容七-->
+<div style="width: 100%;background: #262930;border: 1px solid #262930;margin-top: 5px">
+    <p class="indexTitle_full" style="color: #FFFFFF;width: 100%;text-align: center;padding-top: 66px;margin: 0;">无线充电 要的就是高逼格</p>
+    <p class="indexContent_full indexContent7_content" style="color: #FFFFFF;width: 100%;text-align: center;margin: 0;">支持无线充电 无线传输 128位加密算法</p>
+    <div style="width: 41%;margin: 0 auto;padding-top: 40px;">
+        <img src="webSite/img/Index/photo%20link/图层-6.png" style="width: 100%;">
+    </div>
+</div>
+
+<!--内容八-->
+<div style="width: 100%;position: relative;">
+    <div class="content8_txt" style="position: absolute;top: 0;left: 0;">
+        <p class="indexTitle_full" style="color: #262930;margin: 0;">一次性亲肤贴膜,干净卫生</p>
+        <p class="indexContent_full indexContent8_content" style="color: #868a92;margin: 0;">单人使用,每天更换,避免交叉感染</p>+
+    </div>
+    <div style="width: 100%;padding-left: 42%;padding-top: 90px;">
+        <img src="webSite/img/Index/photo%20link/色阶-1.png" style="width: 100%;">
+    </div>
+    <!--<div style="float: left;width: 42%;border: 1px solid red;">-->
+        <!--<p>一次性亲肤贴膜,干净卫生</p>-->
+        <!--<p>担任使用,每天更换,避免交叉感染</p>-->
+    <!--</div>-->
+    <!--<div style="float: left;width: 57%;border: 1px solid red;">-->
+        <!--<img src="../img/Index/photo%20link/色阶-1.png" style="width: 100%;">-->
+    <!--</div>-->
+</div>
+
+<!--内容九-->
+<div style="width: 100%;height: auto;background: #a5a5a5;margin-top: 30px;">
+    <div style="float: left;width: 42%">
+        <img src="webSite/img/Index/图层-22.png" style="width: 100%;">
+    </div>
+    <div class="content9_txt" style="color: #FFFFFF;float: left;">
+        <p class="content9_title indexTitle_full" style="letter-spacing: 2px;margin-top: 0;margin-bottom: 0;">14天连续心电监测<br>检出率高达99%</p>
+        <p class="content9_content indexContent_full" style="letter-spacing: 2px;line-height: 40px;margin-top: 0;margin-bottom: 0;">
+            国外研究成果表明:采用14天连续心电监测,<br>对心率失常的检出率高达99%。</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+<!--内容十-->
+<div style="width: 100%;position: relative;margin-bottom: 0;margin-top: -3px;padding-bottom: -10px;padding-top: 0;">
+    <img src="webSite/img/Index/图层-763.jpg" style="width: 100%;">
+    <div class="content10_txt" style="position: absolute;top: 0;left: 0;">
+        <p class="indexTitle_full" style="color: #262930;letter-spacing: 3px;margin: 0;">连续监测,联动生命律动</p>
+        <p class="indexContent_full indexContent10_content" style="color: #868a92;letter-spacing: 2px;margin: 0;">精准心率监测,科学运动自主掌控</p>
+    </div>
+</div>
+
+<!--内容十一-->
+<div style="width: 100%;position: relative;margin-top: -10px;">
+    <img src="webSite/img/Index/图层-763_32.jpg" style="width: 100%;">
+    <div style="position: absolute;left: 0;top: 0;width: 100%;text-align: center;">
+        <p class="indexTitle_full" style="color: #FFFFFF;padding-top: 53px;margin: 0;">连续监测, 联结患者康复</p>
+        <p class="indexContent_full indexContent11_content" style="color: #FFFFFF;margin-top: -3px">辅助医生决策, 用药调药更精准</p>
+    </div>
+</div>
+
+<!--内容十二-->
+<div style="width: 100%;position: relative;margin-top: -10px;">
+    <img src="webSite/img/Index/图层-763_44.jpg" style="width: 100%;">
+    <div class="content12_txt" style="position: absolute;left: 0;top: 0;">
+        <p class="indexTitle_full" style="color: #FFFFFF;letter-spacing: 3px;margin: 0;">连续监测, 发现异常心动</p>
+        <p class="indexContent_full indexContent12_content" style="color: #FFFFFF;letter-spacing: 2px;margin: 0;">职场白领经常加班熬夜, 实时掌握身体情况</p>
+    </div>
+</div>
+
+<!--内容十三-->
+<div style="width: 100%;position: relative;margin-top: 0;">
+    <img src="webSite/img/Index/图层-763_99.jpg" style="width: 85%;">
+    <div class="content13_txt" style="position: absolute;top: 0;right: 0;">
+        <p class="indexTitle_full" style="color: #262930;letter-spacing: 3px;margin: 0;">连续监测, 联接家人健康</p>
+        <p class="indexContent_full indexContent13_content" style="color: #868a92;letter-spacing: 2px;margin: 0;">
+            慢病患者日常心电监测, 亲人远程同步数据共享
+        </p>
+    </div>
+</div>
+
+<!--内容十四-->
+<div style="position: relative;">
+
+    <div class="content14_txt" style="position: absolute;">
+        <p class="indexTitle_full indexContent14_title" style="color: #262930;margin: 0;">简单四步, 在家获得专业报告</p>
+        <div class="indexContent_full indexContent14_content" style="color: #868a92;margin: 0;">
+            <img src="webSite/img/Index/assets/1.png" style="vertical-align: middle;height: 100%;">
+            <span>在家贴上心电帖,开始监测</span>
+        </div>
+        <div class="indexContent_full indexContent14_content" style="color: #868a92;margin: 0;">
+            <img src="webSite/img/Index/assets/2.png" style="vertical-align: middle;height: 100%;">
+            <span>数据上传云端</span>
+        </div>
+        <div class="indexContent_full indexContent14_content" style="color: #868a92;margin: 0;">
+            <img src="webSite/img/Index/assets/3.png" style="vertical-align: middle;height: 100%;">
+            <span>专家为您解读数据</span>
+        </div>
+        <div class="indexContent_full indexContent14_content" style="color: #868a92;margin: 0;">
+            <img src="webSite/img/Index/assets/4.png" style="vertical-align: middle;height: 100%;">
+            <span>报告直接发送到你手机</span>
+        </div>
+    </div>
+
+    <div style="margin-left: 51%;width: 40%;height: 100%;">
+        <img src="webSite/img/Index/photo%20link/矢量智能对象.png" style="width: 100%;">
+    </div>
+
+
+    <div class="erweima" style="position: absolute;bottom: 0;left: 0;text-align: center;">
+        <img src="webSite/img/Index/photo%20link/官网首页二维码.png" style="width: 80%;margin: 0 auto;">
+        <p class="erweima_content"  style="color: #868a92;">微信扫一扫,了解更多</p>
+    </div>
+
+</div>
+
+<!--内容十五(轮播)-->
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner" style="background: #e7e7e7;">
+        <div class="item active" style="height: 32.1875rem;">
+            <div style="text-align: center;margin-top: 0;padding-top: 8.5rem;">
+                <p class="indexTitle_full" style="color: #262930;margin-bottom: 0;padding-bottom: 2.6875rem;">来自心卫士用户的评价</p>
+                <p class="indexContent_full" style="color: #868a92;margin-top: 0;">在家贴上心电帖,开始监测,数据上传云端,还有专家为您解读数据,报告直接发送到你的手机</p>
+            </div>
+            <!--<img src="/wp-content/uploads/2014/07/slide1.png" alt="First slide">-->
+            <!--<div class="carousel-caption">标题 1</div>-->
+        </div>
+        <div class="item" style="height: 32.1875rem;">
+            <div style="text-align: center;margin-top: 0;padding-top: 8.5rem;">
+                <p class="indexTitle_full" style="color: #262930;margin-bottom: 0;padding-bottom: 2.6875rem;">来自心卫士用户的评价</p>
+                <p class="indexContent_full" style="color: #868a92;margin-top: 0;">我最近锻炼后会出现头晕，看来需要注意一下了，但是这个设备非常好，完全不影响我运动，洗澡，现在就等我的运动报告了！</p>
+            </div>
+            <!--<img src="/wp-content/uploads/2014/07/slide1.png" alt="First slide">-->
+            <!--<div class="carousel-caption">标题 1</div>-->
+        </div>
+        <div class="item" style="height: 32.1875rem;">
+            <div style="text-align: center;margin-top: 0;padding-top: 8.5rem;">
+                <p class="indexTitle_full" style="color: #262930;margin-bottom: 0;padding-bottom: 2.6875rem;">来自心卫士用户的评价</p>
+                <p class="indexContent_full" style="color: #868a92;margin-top: 0;">亲身体验，小巧，方便，非常不错。支持，关键服务好。</p>
+            </div>
+            <!--<img src="/wp-content/uploads/2014/07/slide1.png" alt="First slide">-->
+            <!--<div class="carousel-caption">标题 1</div>-->
+        </div>
+        <div class="item" style="height: 32.1875rem;">
+            <div style="text-align: center;margin-top: 0;padding-top: 8.5rem;">
+                <p class="indexTitle_full" style="color: #262930;margin-bottom: 0;padding-bottom: 2.6875rem;">来自心卫士用户的评价</p>
+                <p class="indexContent_full" style="color: #868a92;margin-top: 0;">为了父母的健康，哄他们用这个时刻监测心脏健康状况！ 即使不在身边也比较安心，服务真的很到位。</p>
+            </div>
+            <!--<img src="/wp-content/uploads/2014/07/slide1.png" alt="First slide">-->
+            <!--<div class="carousel-caption">标题 1</div>-->
+        </div>
+    </div>
+</div>
+
+<!--内容十六-->
+<div style="width: 100%;">
+    <div style="width: 83%;margin: 8rem auto 6.625rem auto;">
+
+        <div style="width: 100%;padding-top: 30px;">
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article6_425.html">
+                    <img src="webSite/img/Index/30.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">心脏不好的孩子8成平时没症状！孩子的心脏问题怎么查才靠谱？</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年4月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="indexMask3" style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article8_425.html">
+                    <img src="webSite/img/Index/2.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">心卫士惊喜亮相上交会——用人工智能提高生命质量</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年4月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article1_418.html">
+                    <img src="webSite/img/Index/5.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">【心卫士公益】卒中患者免费在家做房颤筛查，远离卒中复发危险</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年4月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div style="width: 100%;padding-top: 30px;">
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article2_411.html">
+                    <img src="webSite/img/Index/1.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">警惕沉默的杀手——无症状房颤。如何远离它的伤害？</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年4月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article3_404.html">
+                    <img src="webSite/img/Index/4.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">【心卫士公益活动，让您在家就能做心脏检查】现房颤患者可免费申请使用</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年4月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article4_320.html">
+                    <img src="webSite/img/Index/photo%20link/图层-1-拷贝.png" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">贴一贴心卫士，做最随心的心脏检查</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年3月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div style="width: 100%;padding-top: 30px;">
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article7_316.html">
+                    <img src="webSite/img/Index/3.jpg" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">课程报名|国家级健康管理师带给您适合咱中国人自己的饮食宝典</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年3月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article5_221.html">
+                    <img src="webSite/img/Index/官网补充图/图层-26.png" style="width: 93%;z-index: -1;"><!--底图-->
+                    <!--蒙版图(鼠标悬浮时显示,否则消失)-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">"好好吃饭"才能护心, 10条吃饭的金标准影响心脏寿命</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年2月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="width: 33%;float: left;text-align: center;position: relative">
+                <a href="webSite/html/temporary/file1/article9_207.html">
+                    <img src="webSite/img/Index/photo%20link/图层-34.png" style="width: 93%;z-index: -1;"><!--底图-->
+                    <div class="mask" style="width: 97%;position: absolute;top: 0;;left: 0;padding-left: 3%;;"><!--蒙版-->
+                        <img src="webSite/img/Index/官网补充图/图层-27.png" style="width: 100%;"><!--蒙版图片-->
+                        <div style="width: 90%;position: absolute;left: 0;bottom: 0;margin-left: 5%;color: #FFFFFF;"><!--蒙版文字-->
+                            <p class="indexContent16_title" style="margin-bottom: 0;">胆固醇是这样破坏血管的！降低胆固醇，记住这5招</p>
+                            <p class="indexContent16_data" style="margin-top: 0;">2017年2月</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</div>
+
+<!--底部信息-->
+<div style="width: 100%;background: #ff485b;margin-bottom: 0;">
+    <div style="width: 12%;margin: 0 auto;padding-top: 6rem;">
+        <img src="webSite/img/Index/assets/logo.png" style="width: 100%;">
+    </div>
+    <div style="width: 12%;margin: 0 auto;padding-top: 3rem">
+        <div style="float: left;width: 25%;padding-left: 5%;"><img src="webSite/img/Index/assets/矢量智能对象_49.png" style="width: 100%"></div>
+        <div style="float:right;width: 25%;padding-right:5%;"><img src="webSite/img/Index/assets/矢量智能对象-WeChat.png" style="width: 100%;"></div>
+        <div style="clear: both;"></div>
+    </div>
+    <!--<div class="bottomInfo" style="padding-top: 3em;text-align: center;color: #FFFFFF;width: 100%;padding-bottom: 6em;opacity: 0.7;filter: Alpha(opacity=70);">-->
+        <!--<p>-->
+            <!--©2017 XINWS Corporation.All rights reserved.-->
+            <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--地址: 上海市高光路北斗产业技术创新西虹桥基地5号楼406-407室-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--上海心云医药科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--联系: kf@xinws.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--客服: 400-8075180-->
+        <!--</p>-->
+    <!--</div>-->
+    <div class="bottomInfo" style="padding-top: 3em;text-align: center;color: #FFFFFF;width: 100%;padding-bottom: 6em;opacity: 0.7;filter: Alpha(opacity=70);">
+        <div class="container">
+            <div class="row" style="margin-bottom: 0;">
+                <div class="col-md-5 bottomInfo_responsive" style="white-space: nowrap;">©2017 XINWS Corporation. All rights reserved.</div>
+                <div class="col-md-7 bottomInfo_responsive" style="white-space: nowrap;">地址: 上海市高光路北斗产业技术创新西虹桥基地5号楼406-407室</div>
+            </div>
+            <div class="row" style="margin-top: 0;">
+                <div class="col-md-2"></div>
+                <div class="col-md-3 bottomInfo_responsive" style="white-space: nowrap;">上海心云医药科技有限公司</div>
+                <div class="col-md-3 bottomInfo_responsive" style="white-space: nowrap;">联系: kf@xinws.com</div>
+                <div class="col-md-3 bottomInfo_responsive" style="white-space: nowrap;">客服: 400-8075180</div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="" style="text-align:center;">
+             <a href="webSite/html/useragreement.html" style="color:white;width:190px;display:inline-block;height:50px;border-radius:50px;box-shadow:0 1px 10px rgba(2,2,120,0.28);line-height:50px;">《许可及服务协议》</a>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // 轮播十五:
+        $("#myCarousel").carousel({interval:5000});//轮播间隔5s,鼠标放在上面自动停止轮播
+
+        // 内容一 :
+        $("#clickWatchVideo_p").click(function () {
+            //document.getElementById("clickWatchVideo").style.display = "block";
+            $("#clickWatchVideo").show();
+            videoPlay();
+            $(function () {
+                $(window).resize();
+            });
+        });
+        $("#closeVideo").click(function () {
+            closeVideo();
+        });
+//        $("#indexMask1").hover(function () {document.getElementById("mengban1").style.display = "block";});
+//        $("#mengban1").hover(function ()   {document.getElementById("mengban1").style.display = "none";});
+//        $("#indexMask2").hover(function () {document.getElementById("mengban2").style.display = "block";});
+//        $("#mengban2").hover(function ()   {document.getElementById("mengban2").style.display = "none";});
+//        $("#indexMask3").hover(function () {document.getElementById("mengban3").style.display = "block";});
+//        $("#mengban3").hover(function ()   {document.getElementById("mengban3").style.display = "none";});
+//        $("#indexMask4").hover(function () {document.getElementById("mengban4").style.display = "block";});
+//        $("#mengban4").hover(function ()   {document.getElementById("mengban4").style.display = "none";});
+//        $("#indexMask5").hover(function () {document.getElementById("mengban5").style.display = "block";});
+//        $("#mengban5").hover(function ()   {document.getElementById("mengban5").style.display = "none";});
+//        $("#indexMask6").hover(function () {document.getElementById("mengban6").style.display = "block";});
+//        $("#mengban6").hover(function ()   {document.getElementById("mengban6").style.display = "none";});
+//        $("#indexMask7").hover(function () {document.getElementById("mengban7").style.display = "block";});
+//        $("#mengban7").hover(function ()   {document.getElementById("mengban7").style.display = "none";});
+//        $("#indexMask8").hover(function () {document.getElementById("mengban8").style.display = "block";});
+//        $("#mengban8").hover(function ()   {document.getElementById("mengban8").style.display = "none";});
+//        $("#indexMask9").hover(function () {document.getElementById("mengban9").style.display = "block";});
+//        $("#mengban9").hover(function ()   {document.getElementById("mengban9").style.display = "none";});
+    });
+
+    // 内容一
+    var indexVideo = document.getElementById("indexVideo");
+    function videoPlay() {
+        indexVideo.play();
+    }
+    function closeVideo() {
+        //document.getElementById("clickWatchVideo").style.display = "none";
+        $("#clickWatchVideo").hide();
+        indexVideo.pause();
+    }
+    $(window).resize(function () {
+        var videoWidth=$("#indexVideoDiv").outerWidth();
+        var videoHeight = videoWidth/1.77;
+        $("#indexVideoDiv").css({
+            position:"absolute",
+            left:($(window).width() - videoWidth)/2+'px',
+            top:($(window).height() - videoHeight)/2+'px'
+        });
+    });
+
+//-----------------------------------------------------
+    /**
+     *   #dowsApp:点击
+     *   #dowsApp_p : dowsApp中的p标签
+     *   #iosanzhuo:显示二维码
+     * */
+   $("#dowsApp").click(function () {
+        $("#iosanzhuo").slideDown('slow');
+        console.log("show");
+    });
+
+
+    $("#dowsApp_p").blur(function () {
+        $("#iosanzhuo").slideUp('slow');
+//        $("#iosanzhuo").css("display","none");
+        console.log("hide");
+    });
+   $('.index_logoShareWeChat').click(function(event){
+        $('.weixinpic').css('display','block');
+        $('.iosanzhuo1').slideDown('slow'); 
+    })
+     $('.index_logoShareWeChat').blur(function(){
+         $('.iosanzhuo1').slideUp('slow');
+     })
+    
+    $('.index_logoShareSina').click(function(event){
+        $('.weibopic').css('display','block');
+        $('.iosanzhuo2').slideDown('slow');
+        
+    })
+     $('.index_logoShareSina').blur(function(){
+         $('.iosanzhuo2').slideUp('slow');
+     })
+  
+//-----------------------------------------------------
+</script>
+
+</body>
+</html>
